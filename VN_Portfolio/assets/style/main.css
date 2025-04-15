@@ -1,0 +1,151 @@
+/* ====== Google Fonts ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* CSS Variables */
+:root {
+  --primary-color: hsl(var(--hue) var(--sat) var(--light)); /* Primary */
+  --color-light: hsl(var(--hue) 45% 98%); /* Light */
+  --color-dark: hsl(var(--hue) 26% 12%); /* Dark */
+  /* --color-dark: hsl(var(--hue), calc(var(--sat) - 20%), calc(var(--light) - 40%)); Dark */
+
+  /* ========================= Mode Change Colors ============================= */
+  --color-01: hsl(var(--hue) var(--sat) var(--light)); /* Primary to Dark */
+  --color-02: hsl(var(--hue) 45% 98%); /* Light to Dark */
+  --color-03: hsl(var(--hue) 26% 12%); /* Dark to Light */
+  --color-04: hsl(var(--hue) 0% 62%); /* Light Gray to Dark Gray */
+  --color-05: hsl(var(--hue) 26% 12%); /* Dark to Primary */
+
+  --body-color: hsl(266, 26%, 12%); /* Dark to Light */
+  --hover-color: hsl(var(--hue) var(--sat) 60%);/* Primary to Dark */
+
+  /* ============================ Background Colors ======================================== */
+  --bottom-nav-bg: hsl(var(--hue) 32% 25% / .65); /* Bottom Nav */
+
+  --card-bg: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
+
+  --modal-backdrop-bg: hsl(var(--hue) 54% 74% / .05) /* Modal Backdrop */;
+
+  --footer-bg: linear-gradient(360deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .1));
+
+  --scrollbar-color: hsl(var(--hue) 25% 20%); /* Scrollbar color */
+  --scrollbar-thumb: hsl(var(--hue) var(--sat) var(--light)); /* Scrollbar thumb color */
+  --scrollbar-thumb-hover: hsla(var(--hue) var(--sat) 60%); /* Scrollbar thumb hover color */
+
+  /* ============== Font and Typography =========== */
+  --body-font-family: 'Winky Sans', sans-serif;
+
+  /* ================ Font Sizes ============== */
+  --h1-font-size: 2.50rem;
+  --h2-font-size: 2.00rem;
+  --h3-font-size: 1.73rem;
+  --h4-font-size: 1.28rem;
+  --h5-font-size: 0.93rem;
+  --h6-font-size: 0.75rem; 
+
+  --xlarge-font-size: 1.48rem;
+  --large-font-size: 1.23rem;
+  --medium-font-size: 1.18rem;
+  --base-font-size: 1.1rem;
+  --small-font-size: 1.07rem;
+  --xsmall-font-size: 0.95rem;
+
+  /* ================ Font Weights ============== */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  /* ================ Layer Order (Z-Index) ============== */
+  --z-minus: -1;
+  --z-base: 0;
+  --z-low: 1;
+  --z-high: 10;
+  --z-content: 100;
+  --z-tooltip: 1000;
+  --z-fixed: 1100;
+  --z-overlay: 1110;
+  --z-modal: 1990;
+  --z-max: 9999;
+}
+
+
+/* ========= light theme ========= */
+.light-theme{
+    /* ========================= Mode Change Colors ============================= */
+    --color-01: hsl(var(--hue) 26% 12%); 
+    --color-02: hsl(var(--hue) 26% 12%); 
+    --color-03: hsl(var(--hue) 45% 98%); 
+    --color-04: hsl(var(--hue) 9% 46%); 
+    --color-05: hsl(var(--hue) var(--sat) var(--light)); 
+  
+    --body-color: hsl(var(--hue), 45%, 98%); 
+    --hover-color: hsl(var(--hue) var(--sat) 60%);
+  
+    /* ============================ Background Colors ======================================== */
+    --bottom-nav-bg: hsl(var(--hue) 32% 25% / .8);
+    --card-bg: hsl(0 0% 100%);
+    --modal-backdrop-bg: hsl(var(--hue) 50% 12% / .5);
+    --footer-bg: linear-gradient(360deg, hsl(var(--hue) var(var(--sat)) var(var(--light))), hsl(var(--hue) var(--sat) var(--light) / .75));
+
+    --scrollbar-color: hsl(var(--hue) 9% 60%);
+    --scrollbar-thumb: hsl(var(--hue) 9% 25%);
+    --scrollbar-thumb-hover: hsla(var(--hue) 9% 17%);
+
+    .bm-nav .menu-hide-btn{
+      box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
+    }
+
+    .pro-card,
+    .skill-card,
+    .service-card,
+    .portfolio-card,
+    .contact-form-body{
+      box-shadow: 0 2px 8px hsl(0, 0%, 1%, .05);
+    }
+
+    .contact-icon,
+    .contact-social-links li{
+      box-shadow: 0 2px 4px hsl(0, 0%, 1%, .1);
+    }
+
+    .vn-footer .copy-right a{
+      color: hsl(var(--hue) 26% 30%);
+    }
+
+    .vn-footer .copy-right a:hover{
+      color: hsl(var(--hue) 0% 0%);
+    }
+
+    .to-top-btn{
+      background: hsl(var(--hue) 26% 12% / .2);
+    }
+
+}
+
+/* ========================
+            reset 
+========================== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  text-decoration: none;
+}
+
+ul,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-04);
+  transition:.3s;
+  cursor: pointer;
+}
+
+
